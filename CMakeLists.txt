@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8)
 project(CppKoans)
 
 add_definitions(
-  -std=c++0x -g -O0
+  -std=c++11 -g -O0
 )
 
 set(cppkoans_SOURCES
