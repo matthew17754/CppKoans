@@ -27,8 +27,6 @@
 #include "headers/koan_handler.hpp"
 #include "headers/all_koans.hpp"
 
-using namespace std;
-
 /**
  *
  */
@@ -54,6 +52,9 @@ int main()
   // Koan 05: pointers
   Koan05_pointers koan05 = Koan05_pointers( &status );
 
+  // Koan 22: lambdas
+  Koan22_lambdas koan22 = Koan22_lambdas( &status );
+
   // Koan XX: sample koans
 //   KoanXX_sample_koans koanXX = KoanXX_sample_koans( &status );
 
@@ -71,7 +72,7 @@ int main()
 
   // Done.
   status.end();
-  return( 0 );
+  return 0;
 }
 
 // EOF
