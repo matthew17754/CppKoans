@@ -88,17 +88,17 @@ void Koan22_lambdas::lambdas_can_modify_their_creation_context()
 {
 	const std::vector<int> values = { 0, 1, 23, 41, 84, 1, 7, 98};
 	
-	int someOddNumber;
-	int someEvenNumber;
+	int someOddNumberCount = 0;
+	int someEvenNumberCount = 0;
 	
-	auto lambda = [&someOddNumber, &someEvenNumber](int i){
-		if (i%2) someOddNumber = i; else someEvenNumber = i;
+	auto lambda = [&someOddNumberCount, &someEvenNumberCount](int i){
+		if (i%2) someOddNumberCount = i; else someEvenNumberCount = i;
 	};
 	
 	std::for_each(values.begin(), values.end(), lambda);
 	
-	ASSERT_EQUAL(FILL_THE_NUMBER_IN, someOddNumber);
-	ASSERT_EQUAL(FILL_THE_NUMBER_IN, someEvenNumber);
+	ASSERT_EQUAL(FILL_THE_NUMBER_IN, someOddNumberCount);
+	ASSERT_EQUAL(FILL_THE_NUMBER_IN, someEvenNumberCount);
 }
 
 // inspired by Effective Modern C++ Item 31 - Scott Meyers
@@ -117,7 +117,7 @@ void Koan22_lambdas::stay_away_from_default_capture_mode_reference()
 		auto lambda = lambdaFactory(2);
 		
 		auto it = std::find_if(values.begin(), values.end(), lambda);
-		ASSERT_EQUAL(0, std::distance(values.begin(), it));
+		ASSERT_EQUAL(4, std::distance(values.begin(), it));
 	}
 }
 
