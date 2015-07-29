@@ -4,9 +4,11 @@ cmake_minimum_required(VERSION 2.8)
 
 project(CppKoans)
 
+if (NOT WIN32)
 add_definitions(
   -std=c++11 -g -O0
 )
+endif()
 
 set(cppkoans_SOURCES
   ${PROJECT_SOURCE_DIR}/cppkoans.cpp
