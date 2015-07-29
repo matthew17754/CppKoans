@@ -73,6 +73,10 @@ int main()
 
   // Done.
   status.end();
+#ifdef WIN32
+  // make sure the console display stays on top until user presses a key
+  system("pause");
+#endif
   return 0;
 }
 
