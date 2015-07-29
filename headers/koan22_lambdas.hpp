@@ -36,7 +36,7 @@ class Koan22_lambdas : Koan
     KoanHandler *status;                //!
     // When ever a koan is added at the very bottom, this counter needs to be
     // increased.
-    static const int num_tests = 6;     //!
+    static const int num_tests = 8;     //!
 
   public:
     /**
