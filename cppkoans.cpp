@@ -34,26 +34,29 @@ int main()
 {
   KoanHandler status;
 
-  // // Koan 00: getting started
-  // Koan00_get_started koan00 = Koan00_get_started( &status );
+  // Koan 00: getting started
+  Koan00_get_started koan00 = Koan00_get_started( &status );
 
-  // // Koan 01: number types
-  // Koan01_number_types koan01 = Koan01_number_types( &status );
+  // Koan 01: number types
+  Koan01_number_types koan01 = Koan01_number_types( &status );
 
-  // // Koan 02: character types
-  // Koan02_character_types koan02 = Koan02_character_types( &status );
+  // Koan 02: character types
+  Koan02_character_types koan02 = Koan02_character_types( &status );
 
-  // // Koan 03: further types
-  // Koan03_further_types koan03 = Koan03_further_types( &status );
+  // Koan 03: further types
+  Koan03_further_types koan03 = Koan03_further_types( &status );
 
-  // // Koan 04: arrays
-  // Koan04_arrays koan04 = Koan04_arrays( &status );
+  // Koan 04: arrays
+  Koan04_arrays koan04 = Koan04_arrays( &status );
   
-  // // Koan 05: pointers
-  // Koan05_pointers koan05 = Koan05_pointers( &status );
+  // Koan 05: pointers
+  Koan05_pointers koan05 = Koan05_pointers( &status );
 
   // Koan 22: lambdas
   Koan22_lambdas koan22 = Koan22_lambdas( &status );
+
+  // Koan 22: auto
+  Koan23_auto koan23 = Koan23_auto(&status);
 
   // Koan XX: sample koans
 //   KoanXX_sample_koans koanXX = KoanXX_sample_koans( &status );
@@ -61,14 +64,15 @@ int main()
   // Welcome message
   status.start();
 
-  // // The Path of Enlightment
-  // koan00.run();
-  // koan01.run();
-  // koan02.run();
-  // koan03.run();
-  // koan04.run();
-  // koan05.run();
-  koan22.run();
+   // The Path of Enlightment
+   koan00.run();
+   koan01.run();
+   koan02.run();
+   koan03.run();
+   koan04.run();
+   koan05.run();
+   koan22.run();
+   koan23.run();
 //   koanXX.run();
 
   // Done.
