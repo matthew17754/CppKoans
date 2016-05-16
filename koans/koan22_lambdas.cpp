@@ -64,7 +64,7 @@ void Koan22_lambdas::lambdas_can_capture_their_creation_context_in_a_closure()
 {
 	const std::vector<int> values = { 0, 1, 1, 0, 0, 1, 0, 0};
 	
-	const bool countZeroesOrOnes = FILL_THE_NUMBER_IN;
+	const int countZeroesOrOnes = FILL_THE_NUMBER_IN;
 	
 	auto lambda = [countZeroesOrOnes](int i){ return i==countZeroesOrOnes; };
 	
@@ -75,7 +75,7 @@ void Koan22_lambdas::lambdas_can_capture_references_to_their_creation_context()
 {
 	const std::vector<int> values = { 0, 1, 1, 0, 0, 1, 0, 0};
 	
-	bool countZeroesOrOnes = FILL_THE_NUMBER_IN;
+	int countZeroesOrOnes = FILL_THE_NUMBER_IN;
 
 	auto lambda = [&countZeroesOrOnes](int i){ return i==countZeroesOrOnes; };
 	
