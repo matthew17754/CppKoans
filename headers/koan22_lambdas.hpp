@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2012 Torbjörn Klatt <opensource@torbjoern-klatt.de>
+    Copyright (c) 2016 Thibauld Nion <tibonihoo@yahoo.fr>
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
@@ -54,6 +54,9 @@ class Koan22_lambdas : Koan
      *
      */
     void run() {
+	
+      status->episode_start( "lambdas" );
+	  
       // For each koan in this episode, one line needs to be written.
       // The koans are executed in the order they are called here.
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::bracket_paren_mustache_makes_a_lambda) );
