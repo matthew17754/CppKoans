@@ -26,8 +26,8 @@
 #include "../helper.hpp"
 
 // Do not to forget to rename the preprocessor directives as well!
-#ifndef KOAN22_LAMBDAS_HPP
-#define KOAN22_LAMBDAS_HPP
+#ifndef KOAN11_LAMBDAS_HPP
+#define KOAN11_LAMBDAS_HPP
 
 // Rename the Episode
 class Koan22_lambdas : Koan
@@ -107,6 +107,6 @@ class Koan22_lambdas : Koan
 #define REPLACE_WITH_CORRECT_LAMBDA_I0 [](int i) { return 0; }
 
 	
-#endif // KOAN22_LAMBDAS_HPP
+#endif // KOAN11_LAMBDAS_HPP
 
 // EOF

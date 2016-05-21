@@ -26,8 +26,8 @@
 #include "../helper.hpp"
 
 // Do not to forget to rename the preprocessor directives as well!
-#ifndef KOAN23_AUTO_HPP
-#define KOAN23_AUTO_HPP
+#ifndef KOAN10_AUTO_HPP
+#define KOAN10_AUTO_HPP
 
 // Rename the Episode
 class Koan23_auto : Koan
@@ -103,6 +103,6 @@ class Koan23_auto : Koan
 
 
 	
-#endif // KOAN23_AUTO_HPP
+#endif // KOAN10_AUTO_HPP
 
 // EOF
