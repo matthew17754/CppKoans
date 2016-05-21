@@ -30,7 +30,7 @@
 #define KOAN11_LAMBDAS_HPP
 
 // Rename the Episode
-class Koan22_lambdas : Koan
+class Koan11_lambdas : Koan
 {
   private:
     KoanHandler *status;                //!
@@ -42,13 +42,13 @@ class Koan22_lambdas : Koan
     /**
      *
      */
-    Koan22_lambdas( KoanHandler *status ) : status( status ) {
+    Koan11_lambdas( KoanHandler *status ) : status( status ) {
       status->register_koans( num_tests );
     }
     /**
      *
      */
-    ~Koan22_lambdas() {}
+    ~Koan11_lambdas() {}
 
     /**
      *
@@ -59,14 +59,14 @@ class Koan22_lambdas : Koan
 	  
       // For each koan in this episode, one line needs to be written.
       // The koans are executed in the order they are called here.
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::bracket_paren_mustache_makes_a_lambda) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::lambdas_make_generic_algorithms_easier_to_user) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::lambdas_can_capture_their_creation_context_in_a_closure) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::lambdas_can_capture_references_to_their_creation_context) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::lambdas_can_modify_their_creation_context) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::stay_away_from_default_capture_mode_reference) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::stay_away_from_default_capture_mode_copy) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan22_lambdas::lambdas_can_help_with_your_curry_ing) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::bracket_paren_mustache_makes_a_lambda) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::lambdas_make_generic_algorithms_easier_to_user) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::lambdas_can_capture_their_creation_context_in_a_closure) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::lambdas_can_capture_references_to_their_creation_context) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::lambdas_can_modify_their_creation_context) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::stay_away_from_default_capture_mode_reference) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::stay_away_from_default_capture_mode_copy) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan11_lambdas::lambdas_can_help_with_your_curry_ing) );
 
       status->episode_done( "lambdas" );
     }

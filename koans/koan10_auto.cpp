@@ -34,7 +34,7 @@ template<typename T>
 class TD;
 
 
-void Koan23_auto::use_decltype_to_get_an_expression_type()
+void Koan10_auto::use_decltype_to_get_an_expression_type()
 {
   const int constIntVar = 42;
 	// TD<decltype(constIntVar)> constIntVarTypeDisplay;
@@ -81,7 +81,7 @@ namespace
   }
 }
 
-void Koan23_auto::static_cast_is_how_you_force_a_variable_type()
+void Koan10_auto::static_cast_is_how_you_force_a_variable_type()
 {
 	float myReal = 2.3f;
 	auto otherReal = SomeAPIGetRealNumber();
@@ -90,7 +90,7 @@ void Koan23_auto::static_cast_is_how_you_force_a_variable_type()
   ASSERT(conversionIsCorrect);
 }
 
-void Koan23_auto::auto_ignores_constness()
+void Koan10_auto::auto_ignores_constness()
 {
 	int nonConstInt = 42;
 	const int constInt = 42;
@@ -112,7 +112,7 @@ void Koan23_auto::auto_ignores_constness()
 }
 
 
-void Koan23_auto::auto_ignores_referenceness()
+void Koan10_auto::auto_ignores_referenceness()
 {  	
 	int nonConstInt = 42;
 	int& intRef = nonConstInt;
@@ -144,7 +144,7 @@ void Koan23_auto::auto_ignores_referenceness()
 	
 }
 
-void Koan23_auto::auto_with_universal_reference_distinguishes_lvalue_and_rvalue()
+void Koan10_auto::auto_with_universal_reference_distinguishes_lvalue_and_rvalue()
 {    	
 	int nonConstInt = 42;
 	int& intRef = nonConstInt;
@@ -179,7 +179,7 @@ namespace
   }
 }
 
-void Koan23_auto::auto_decays_arrays_and_functions()
+void Koan10_auto::auto_decays_arrays_and_functions()
 {
 	int intArray[3] = {0};
 	
@@ -212,7 +212,7 @@ void Koan23_auto::auto_decays_arrays_and_functions()
     && std::is_array<decltype(yRef)>::value);
 }
 
-void Koan23_auto::auto_assumes_braces_are_initializer_list()
+void Koan10_auto::auto_assumes_braces_are_initializer_list()
 {
    auto intCtorAssigned = 42;
    ASSERT(std::is_integral<decltype(intCtorAssigned)>::value);
@@ -230,7 +230,7 @@ void Koan23_auto::auto_assumes_braces_are_initializer_list()
    ASSERT(std::is_void<decltype(intCtorBracesNoAuto)>::value);
 }
 
-void Koan23_auto::decltype_auto_use_decltype_type_deduction_rules()
+void Koan10_auto::decltype_auto_use_decltype_type_deduction_rules()
 {
 	int nonConstInt = 42;
 	const int& constIntRef = nonConstInt;

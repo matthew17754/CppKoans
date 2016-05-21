@@ -30,7 +30,7 @@
 #define KOAN10_AUTO_HPP
 
 // Rename the Episode
-class Koan23_auto : Koan
+class Koan10_auto : Koan
 {
   private:
     KoanHandler *status;                //!
@@ -42,13 +42,13 @@ class Koan23_auto : Koan
     /**
      *
      */
-    Koan23_auto( KoanHandler *status ) : status( status ) {
+    Koan10_auto( KoanHandler *status ) : status( status ) {
       status->register_koans( num_tests );
     }
     /**
      *
      */
-    ~Koan23_auto() {}
+    ~Koan10_auto() {}
 
     /**
      *
@@ -59,14 +59,14 @@ class Koan23_auto : Koan
 	  
       // For each koan in this episode, one line needs to be written.
       // The koans are executed in the order they are called here.
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan23_auto::use_decltype_to_get_an_expression_type) );
-  	  status->eval_koan(*this, static_cast<void (Koan:: *)()>(&Koan23_auto::static_cast_is_how_you_force_a_variable_type));
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan23_auto::auto_ignores_constness) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan23_auto::auto_ignores_referenceness) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan23_auto::auto_with_universal_reference_distinguishes_lvalue_and_rvalue) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan23_auto::auto_decays_arrays_and_functions) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan23_auto::auto_assumes_braces_are_initializer_list) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan23_auto::decltype_auto_use_decltype_type_deduction_rules) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan10_auto::use_decltype_to_get_an_expression_type) );
+  	  status->eval_koan(*this, static_cast<void (Koan:: *)()>(&Koan10_auto::static_cast_is_how_you_force_a_variable_type));
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan10_auto::auto_ignores_constness) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan10_auto::auto_ignores_referenceness) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan10_auto::auto_with_universal_reference_distinguishes_lvalue_and_rvalue) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan10_auto::auto_decays_arrays_and_functions) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan10_auto::auto_assumes_braces_are_initializer_list) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan10_auto::decltype_auto_use_decltype_type_deduction_rules) );
 
       status->episode_done( "auto" );
     }

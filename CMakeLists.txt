@@ -6,7 +6,7 @@ project(CppKoans)
 
 if (NOT WIN32)
 add_definitions(
-  -std=c++11 -g -O0
+  -std=c++14 -g -O0
 )
 endif()
 

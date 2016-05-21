@@ -31,13 +31,13 @@
 // The implementations of the different koans of this episode is done here.
 // Don't forget to rename the above include.
 
-void Koan22_lambdas::bracket_paren_mustache_makes_a_lambda()
+void Koan11_lambdas::bracket_paren_mustache_makes_a_lambda()
 {
 	auto lambda = REPLACE_WITH_CORRECT_LAMBDA;
 	ASSERT_EQUAL( 42, lambda() );
 }
 
-void Koan22_lambdas::lambdas_make_generic_algorithms_easier_to_user()
+void Koan11_lambdas::lambdas_make_generic_algorithms_easier_to_user()
 {
 	const std::vector<int> values = { 1, 41, 7, 13, 84, 9};
 
@@ -60,7 +60,7 @@ void Koan22_lambdas::lambdas_make_generic_algorithms_easier_to_user()
 	}
 }
 
-void Koan22_lambdas::lambdas_can_capture_their_creation_context_in_a_closure()
+void Koan11_lambdas::lambdas_can_capture_their_creation_context_in_a_closure()
 {
 	const std::vector<int> values = { 0, 1, 1, 0, 0, 1, 0, 0};
 	
@@ -71,7 +71,7 @@ void Koan22_lambdas::lambdas_can_capture_their_creation_context_in_a_closure()
 	ASSERT_EQUAL(3, std::count_if(values.begin(), values.end(), lambda ));
 }
 
-void Koan22_lambdas::lambdas_can_capture_references_to_their_creation_context()
+void Koan11_lambdas::lambdas_can_capture_references_to_their_creation_context()
 {
 	const std::vector<int> values = { 0, 1, 1, 0, 0, 1, 0, 0};
 	
@@ -84,7 +84,7 @@ void Koan22_lambdas::lambdas_can_capture_references_to_their_creation_context()
 	ASSERT_EQUAL(5, std::count_if(values.begin(), values.end(), lambda ));
 }
 
-void Koan22_lambdas::lambdas_can_modify_their_creation_context()
+void Koan11_lambdas::lambdas_can_modify_their_creation_context()
 {
 	const std::vector<int> values = { 0, 1, 23, 41, 84, 1, 7, 98};
 	
@@ -102,7 +102,7 @@ void Koan22_lambdas::lambdas_can_modify_their_creation_context()
 }
 
 // inspired by Effective Modern C++ Item 31 - Scott Meyers
-void Koan22_lambdas::stay_away_from_default_capture_mode_reference()
+void Koan11_lambdas::stay_away_from_default_capture_mode_reference()
 {
 	// Find where to correct this code
 	for(int i=0; i<100; ++i)
@@ -123,7 +123,7 @@ void Koan22_lambdas::stay_away_from_default_capture_mode_reference()
 
 
 // inspired by Effective Modern C++ Item 31 - Scott Meyers
-void Koan22_lambdas::stay_away_from_default_capture_mode_copy()
+void Koan11_lambdas::stay_away_from_default_capture_mode_copy()
 {
 	// Find where to correct this code
 	
@@ -157,7 +157,7 @@ void Koan22_lambdas::stay_away_from_default_capture_mode_copy()
 
 // Currying: partial application of a function (see https://en.wikipedia.org/wiki/Currying)
 // also inspired by Effective Modern C++ Item 34 - Scott Meyers
-void Koan22_lambdas::lambdas_can_help_with_your_curry_ing()
+void Koan11_lambdas::lambdas_can_help_with_your_curry_ing()
 {
 	// 3-ary function
 	auto threeAryFunction = [](int a, int b, int c){ return a*b + c; };
