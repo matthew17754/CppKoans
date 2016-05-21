@@ -23,7 +23,7 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "../headers/koan23_auto.hpp"
+#include "../headers/koan10_auto.hpp"
 #include <vector>
 #include <type_traits>
 

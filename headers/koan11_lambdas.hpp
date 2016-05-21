@@ -80,7 +80,7 @@ class Koan22_lambdas : Koan
 
   private:
     // Add further Koans down here by defining their name.
-    // The implementation of these is done in ~/koans/koan22_lambdas.cpp
+    // The implementation of these is done in ~/koans/koan11_lambdas.cpp
     // REMARK: Do not forget to increase this.num_tests when you add
     // another koan
 	

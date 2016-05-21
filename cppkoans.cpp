@@ -53,10 +53,10 @@ int main()
   Koan05_pointers koan05 = Koan05_pointers( &status );
 
   // Koan 22: lambdas
-  Koan22_lambdas koan22 = Koan22_lambdas( &status );
+  Koan11_lambdas koan11 = Koan11_lambdas( &status );
 
   // Koan 22: auto
-  Koan23_auto koan23 = Koan23_auto(&status);
+  Koan10_auto koan10 = Koan10_auto(&status);
 
   // Koan XX: sample koans
 //   KoanXX_sample_koans koanXX = KoanXX_sample_koans( &status );
@@ -71,8 +71,9 @@ int main()
    koan03.run();
    koan04.run();
    koan05.run();
-   koan22.run();
-   koan23.run();
+   
+   koan10.run();
+   koan11.run();
 //   koanXX.run();
 
   // Done.

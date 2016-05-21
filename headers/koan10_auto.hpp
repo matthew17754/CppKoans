@@ -80,7 +80,7 @@ class Koan23_auto : Koan
 
   private:
     // Add further Koans down here by defining their name.
-    // The implementation of these is done in ~/koans/koan23_auto.cpp
+    // The implementation of these is done in ~/koans/koan10_auto.cpp
     // REMARK: Do not forget to increase this.num_tests when you add
     // another koan
 	

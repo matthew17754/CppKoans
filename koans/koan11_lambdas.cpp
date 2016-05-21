@@ -23,7 +23,7 @@
     OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "../headers/koan22_lambdas.hpp"
+#include "../headers/koan11_lambdas.hpp"
 #include <vector>
 #include <algorithm>
 #include <functional>
