@@ -57,6 +57,7 @@ class Koan05_pointers : Koan
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_really_just_variables ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_have_power ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_not_almighty ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_can_manipulate_arrays ) );
 
       status->episode_done( "sixth" );
     }
@@ -74,6 +75,8 @@ class Koan05_pointers : Koan
     void they_are_really_just_variables();
     void they_have_power();
     void they_are_not_almighty();
+    void they_can_manipulate_arrays();
+
 };
 
 #endif // KOAN05_POINTERS_HPP
