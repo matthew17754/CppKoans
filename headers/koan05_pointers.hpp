@@ -33,7 +33,7 @@ class Koan05_pointers : Koan
 {
   private:
     KoanHandler *status;                //!
-    static const int num_tests = 4;     //!
+    static const int num_tests = 5;     //!
 
   public:
     /**
