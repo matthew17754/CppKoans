@@ -56,10 +56,9 @@ class Koan06_files : Koan
     void run() {
       // For each koan in this episode, one line needs to be written.
       // The koans are executed in the order they are called here.
-      status->episode_start( "sixth" );
+      status->episode_start( "seventh" );
 
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan06_files::a_sample_koan ) );
-      //status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_just_variables ) );
 
       status->episode_done( "seventh" );
     }
