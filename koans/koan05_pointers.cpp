@@ -69,6 +69,16 @@ void Koan05_pointers::they_are_not_almighty()
   ASSERT_EQUAL( wannabe_powerful, THIS_IS_NOT_NULL );
 }
 
+void Koan05_pointers::they_can_be_non_const_unlike_array_variables()
+{
+  int array[4];
+  int *pa = array;
+  ASSERT_EQUAL( pa, THIS_IS_NOT_NULL);
+  
+  pa = pa + 3;
+  ASSERT_EQUAL( pa, THIS_IS_NOT_NULL);
+}
+
 
 void Koan05_pointers::they_can_manipulate_arrays()
 {
