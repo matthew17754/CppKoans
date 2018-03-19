@@ -33,7 +33,7 @@ class Koan05_pointers : Koan
 {
   private:
     KoanHandler *status;                //!
-    static const int num_tests = 5;     //!
+    static const int num_tests = 6;     //!
 
   public:
     /**
@@ -53,11 +53,18 @@ class Koan05_pointers : Koan
     void run() {
       status->episode_start( "sixth" );
       
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_just_variables ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_really_just_variables ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_have_power ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_are_not_almighty ) );
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan05_pointers::they_can_manipulate_arrays ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_are_just_variables ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_are_really_just_variables ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_have_power ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_are_not_almighty ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_can_be_non_const_unlike_array_variables ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_can_manipulate_arrays ) );
 
       status->episode_done( "sixth" );
     }
@@ -75,6 +82,7 @@ class Koan05_pointers : Koan
     void they_are_really_just_variables();
     void they_have_power();
     void they_are_not_almighty();
+    void they_can_be_non_const_unlike_array_variables();
     void they_can_manipulate_arrays();
 
 };
