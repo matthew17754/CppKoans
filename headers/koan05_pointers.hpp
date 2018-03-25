@@ -33,7 +33,7 @@ class Koan05_pointers : Koan
 {
   private:
     KoanHandler *status;                //!
-    static const int num_tests = 6;     //!
+    static const int num_tests = 8;     //!
 
   public:
     /**
@@ -65,7 +65,11 @@ class Koan05_pointers : Koan
         ( &Koan05_pointers::they_can_be_non_const_unlike_array_variables ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>
         ( &Koan05_pointers::they_can_manipulate_arrays ) );
-
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_can_be_assigned_addresses_and_pValues ) ); 
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_can_do_arithmetic_with_integers_only ) ); 
+        
       status->episode_done( "sixth" );
     }
 
@@ -84,7 +88,8 @@ class Koan05_pointers : Koan
     void they_are_not_almighty();
     void they_can_be_non_const_unlike_array_variables();
     void they_can_manipulate_arrays();
-
+    void they_can_be_assigned_addresses_and_pValues();
+    void they_can_do_arithmetic_with_integers_only(); 
 };
 
 #endif // KOAN05_POINTERS_HPP
