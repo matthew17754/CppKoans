@@ -87,5 +87,35 @@ void Koan05_pointers::they_can_manipulate_arrays()
   ASSERT_EQUAL( *(pa+2), FILL_THE_NUMBER_IN);
 }
 
+void Koan05_pointers::they_can_be_assigned_addresses_and_pValues()
+{
+  int b; 
+  int* pA;
+  int* pB = &b; 
+  pA = pB;
+  ASSERT_EQUAL(*pA, FILL_THE_NUMBER_IN); 
+}
+
+void Koan05_pointers::they_can_do_arithmetic_with_integers_only()
+{
+  int a[10] = { 1, 1, 1, 1, 1, 2, 2, 2, 2, 2};
+  a[5] = {8901};
+  int *ap = a; 
+
+  // Do the necessary pointer arithmetic with ap
+  ASSERT_EQUAL(&a[5], THIS_IS_NOT_NULL); 
+
+  // What is the value pointed to by ap before 
+  // and after the arithmetic? 
+  ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN); 
+  
+  ap = ap + 5;
+  ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN); 
+  
+  ap = ap + 1;
+  ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN); 
+  
+}
+
 
 // EOF
