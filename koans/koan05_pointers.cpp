@@ -104,16 +104,28 @@ void Koan05_pointers::they_can_do_arithmetic_with_integers_only()
 
   // Do the necessary pointer arithmetic with ap
   ASSERT_EQUAL(&a[5], THIS_IS_NOT_NULL); 
-
   // What is the value pointed to by ap before 
   // and after the arithmetic? 
   ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN); 
-  
   ap = ap + 5;
   ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN); 
-  
   ap = ap + 1;
   ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN); 
+  
+}
+
+void Koan05_pointers::they_can_be_initialized_to_dynamic_memory(){
+  char *p = 0; 
+  p = (char *)malloc(5 * sizeof(char)); 
+  ASSERT_EQUAL(p, THIS_IS_NOT_NULL);
+  
+}
+
+void Koan05_pointers::they_can_be_used_to_access_dynamic_memory(){
+  char *p = 0; 
+  p = (char *)malloc(5 * sizeof(char)); 
+  *p = 'a'; 
+  ASSERT_EQUAL(*p, FILL_THE_CHAR_IN);
   
 }
 

@@ -32,8 +32,8 @@
 class Koan05_pointers : Koan
 {
   private:
-    KoanHandler *status;                //!
-    static const int num_tests = 8;     //!
+    KoanHandler *status;                 //!
+    static const int num_tests = 10;     //!
 
   public:
     /**
@@ -69,6 +69,10 @@ class Koan05_pointers : Koan
         ( &Koan05_pointers::they_can_be_assigned_addresses_and_pValues ) ); 
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>
         ( &Koan05_pointers::they_can_do_arithmetic_with_integers_only ) ); 
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_can_be_initialized_to_dynamic_memory ) ); 
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan05_pointers::they_can_be_used_to_access_dynamic_memory ) ); 
         
       status->episode_done( "sixth" );
     }
@@ -90,6 +94,8 @@ class Koan05_pointers : Koan
     void they_can_manipulate_arrays();
     void they_can_be_assigned_addresses_and_pValues();
     void they_can_do_arithmetic_with_integers_only(); 
+    void they_can_be_initialized_to_dynamic_memory();
+    void they_can_be_used_to_access_dynamic_memory();
 };
 
 #endif // KOAN05_POINTERS_HPP
