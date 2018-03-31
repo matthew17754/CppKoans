@@ -58,7 +58,8 @@ class Koan06_files : Koan
       // The koans are executed in the order they are called here.
       status->episode_start( "seventh" );
 
-      status->eval_koan( *this, static_cast<void ( Koan:: * )()>( &Koan06_files::a_sample_koan ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+        ( &Koan06_files::they_can_be_used_to_store_information ) );
 
       status->episode_done( "seventh" );
     }
@@ -74,7 +75,7 @@ class Koan06_files : Koan
     // Add further Koans down here by defining their name.
     // The implementation of these is done in ~/koans/koanXX_sample_koans.cpp
     // REMARK: Do not forget to increase this.num_tests when you add another koan
-    void a_sample_koan();
+    void they_can_be_used_to_store_information();
 };
 
 #endif // KOANXX_SAMPLE_KOANS_HPP
