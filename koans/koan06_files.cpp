@@ -28,6 +28,20 @@
 // The implementations of the different koans of this episode is done here.
 // Don't forget to rename the above include.
 
+void Koan06_files::they_are_accessed_using_file_pointers()
+{
+  FILE* fp = 0; 
+  
+  fp = fopen("../koans/file_exists.txt", "r");
+  ASSERT (fp != 0); 
+
+  fp = fopen("../koans/nonexistentfile", "r");
+  ASSERT_EQUAL(fp, FILL_THE_NUMBER_IN);
+  
+  if(fp)
+    fclose(fp);
+    
+}
 void Koan06_files::they_can_be_used_to_store_information()
 {
   int marks[10] = {38, 54, 93, 41, 55, 86, 59, 100, 40, 92}; 
