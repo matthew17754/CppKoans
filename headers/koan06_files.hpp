@@ -36,7 +36,7 @@ class Koan06_files : Koan
     KoanHandler *status;                //!
     // When ever a koan is added at the very bottom, this counter needs to be
     // increased.
-    static const int num_tests = 2;     //!
+    static const int num_tests = 3;     //!
 
   public:
     /**
@@ -62,6 +62,8 @@ class Koan06_files : Koan
         ( &Koan06_files::they_are_accessed_using_file_pointers ) );
       status->eval_koan( *this, static_cast<void ( Koan:: * )()>
         ( &Koan06_files::they_can_be_used_to_store_information ) );
+      status->eval_koan( *this, static_cast<void ( Koan:: * )()>
+      ( &Koan06_files::they_can_be_used_for_retrieval ) );
 
       status->episode_done( "seventh" );
     }
@@ -79,6 +81,7 @@ class Koan06_files : Koan
     // REMARK: Do not forget to increase this.num_tests when you add another koan
     void they_are_accessed_using_file_pointers(); 
     void they_can_be_used_to_store_information();
+    void they_can_be_used_for_retrieval();
 };
 
 #endif // KOANXX_SAMPLE_KOANS_HPP

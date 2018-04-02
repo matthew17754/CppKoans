@@ -62,4 +62,25 @@ void Koan06_files::they_can_be_used_to_store_information()
 
 }
 
+#include <string.h>
+
+void Koan06_files::they_can_be_used_for_retrieval() {
+  int marks[10];
+  memset(marks, 0, 10*sizeof(int));
+  int sum = 0;
+  for (int i = 0; i < 10; i++)
+    sum += marks[i]; 
+  ASSERT_EQUAL(sum, 0);
+  
+  FILE *fp = fopen("data.bin", "r+b");
+  fread(marks, 10, sizeof(int), fp);
+  //marks[10] = {38, 54, 93, 41, 55, 86, 59, 100, 40, 92}; 
+  for (int i = 0; i < 10; i++) 
+    sum += marks[i];
+
+  ASSERT_EQUAL(sum, FILL_THE_NUMBER_IN);
+  
+}
+
+
 // EOF
