@@ -83,11 +83,15 @@ public:
         *this,
         static_cast<void (Koan::*)()>(
             &Koan05_pointers::they_can_be_used_to_access_dynamic_memory));
-    status->eval_koan(*this, static_cast<void (Koan::*)()>(
-                                &Koan05_pointers::they_are_required_if_you_want_to_write_swap));
-    status->eval_koan(*this, static_cast<void (Koan::*)()>(
-                                &Koan05_pointers::they_are_used_for_writing_indirection_code));
-    
+    status->eval_koan(
+        *this,
+        static_cast<void (Koan::*)()>(
+            &Koan05_pointers::they_are_required_if_you_want_to_write_swap));
+    status->eval_koan(
+        *this,
+        static_cast<void (Koan::*)()>(
+            &Koan05_pointers::they_are_used_for_writing_indirection_code));
+
     status->episode_done("sixth");
   }
 
