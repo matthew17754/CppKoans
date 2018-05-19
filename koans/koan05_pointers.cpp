@@ -117,4 +117,46 @@ void Koan05_pointers::they_can_be_used_to_access_dynamic_memory() {
   ASSERT_EQUAL(*p, FILL_THE_CHAR_IN);
 }
 
+void swap(int *a, int *b) { 
+  int temp = *a; 
+  *a = *b; 
+  *b = temp;
+}
+
+void Koan05_pointers::they_are_required_if_you_want_to_write_swap() { 
+  int a = 5; 
+  int b = 3; 
+  swap (&a, &b); 
+  
+  ASSERT_EQUAL(a, FILL_THE_NUMBER_IN); 
+  ASSERT_EQUAL(b, FILL_THE_NUMBER_IN);
+}
+
+int f(int ** r, int ** s) {
+  int temp = ** r;
+  int temp2 = **s;
+  int * z = *r;
+  *r = *s;
+  *s = z;
+  // printf("**r = %d\n",**r);
+  // printf("**s = %d\n",**s);
+  *z += 3;
+  **s -= 8;
+  **r -= 19;
+  return temp + temp2;
+}
+
+void Koan05_pointers::they_are_used_for_writing_indirection_code() { 
+  int a = 80;
+  int b = 12;
+  int *p = &a;
+  int *q = &b;
+  int x = f(&p, &q);
+  ASSERT_EQUAL(a, FILL_THE_NUMBER_IN); 
+  ASSERT_EQUAL(b, FILL_THE_NUMBER_IN); 
+  ASSERT_EQUAL(x, FILL_THE_NUMBER_IN); 
+  
+}
+
+
 // EOF
