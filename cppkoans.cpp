@@ -27,8 +27,6 @@
 #include "headers/koan_handler.hpp"
 #include "headers/all_koans.hpp"
 
-using namespace std;
-
 /**
  *
  */
@@ -54,8 +52,17 @@ int main()
   // Koan 05: pointers
   Koan05_pointers koan05 = Koan05_pointers( &status );
 
+  // Koan 06: files
+  Koan06_files koan06 = Koan06_files( &status );
+  
+  // Koan 10: auto
+  Koan10_auto koan10 = Koan10_auto(&status);
+
+  // Koan 11: lambdas
+  Koan11_lambdas koan11 = Koan11_lambdas( &status );
+
   // Koan XX: sample koans
-//   KoanXX_sample_koans koanXX = KoanXX_sample_koans( &status );
+  // KoanXX_sample_koans koanXX = KoanXX_sample_koans( &status );
 
   // Welcome message
   status.start();
@@ -67,11 +74,19 @@ int main()
   koan03.run();
   koan04.run();
   koan05.run();
-//   koanXX.run();
+  koan06.run();
+  
+  koan10.run();
+  koan11.run();
+  // koanXX.run();
 
   // Done.
   status.end();
-  return( 0 );
+#ifdef WIN32
+  // make sure the console display stays on top until user presses a key
+  system("pause");
+#endif
+  return 0;
 }
 
 // EOF
