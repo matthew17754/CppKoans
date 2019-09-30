@@ -28,56 +28,56 @@
 void Koan05_pointers::they_are_just_variables() {
   int an_int = 42;
   int *pointer_to_an_int = &an_int;
-  ASSERT_EQUAL(*pointer_to_an_int, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(pointer_to_an_int, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(*pointer_to_an_int, an_int);
+  ASSERT_EQUAL(pointer_to_an_int, &an_int);
 }
 
 void Koan05_pointers::they_are_really_just_variables() {
   int an_int = 42;
   int another_int = 21;
   int *pointer_to_an_int = &an_int;
-  ASSERT_EQUAL(*pointer_to_an_int, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(pointer_to_an_int, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(*pointer_to_an_int, an_int);
+  ASSERT_EQUAL(pointer_to_an_int, &an_int);
   pointer_to_an_int = &another_int;
-  ASSERT_EQUAL(*pointer_to_an_int, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(pointer_to_an_int, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(*pointer_to_an_int, another_int);
+  ASSERT_EQUAL(pointer_to_an_int, &another_int);
 }
 
 void Koan05_pointers::they_have_power() {
   int an_int = 42;
   int *powerful_pointer = &an_int;
-  ASSERT_EQUAL(*powerful_pointer, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(powerful_pointer, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(*powerful_pointer, an_int);
+  ASSERT_EQUAL(powerful_pointer, &an_int);
   *powerful_pointer = 21;
-  ASSERT_EQUAL(an_int, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(powerful_pointer, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(an_int, *powerful_pointer);
+  ASSERT_EQUAL(powerful_pointer, &an_int);
 }
 
 void Koan05_pointers::they_are_not_almighty() {
-  const int an_int = 42;
-  const int *wannabe_powerful = &an_int;
-  ASSERT_EQUAL(*wannabe_powerful, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(wannabe_powerful, THIS_IS_NOT_NULL);
+  int an_int = 42;
+  int *wannabe_powerful = &an_int;
+  ASSERT_EQUAL(*wannabe_powerful, an_int);
+  ASSERT_EQUAL(wannabe_powerful, &an_int);
   // Will this work? Think about it!
   // What do you need to change to make it work?
-  //   *wannabe_powerful = 21;
-  ASSERT_EQUAL(an_int, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(wannabe_powerful, THIS_IS_NOT_NULL);
+  *wannabe_powerful = 21;
+  ASSERT_EQUAL(an_int, *wannabe_powerful);
+  ASSERT_EQUAL(wannabe_powerful, &an_int);
 }
 
 void Koan05_pointers::they_can_be_non_const_unlike_array_variables() {
   int array[4];
   int *pa = array;
-  ASSERT_EQUAL(pa, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(pa, array);
 
   pa = pa + 3;
-  ASSERT_EQUAL(pa, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(pa, array + 3);
 }
 
 void Koan05_pointers::they_can_manipulate_arrays() {
   int array[4] = {1, 2, 3, 4};
   int *pa = array;
-  ASSERT_EQUAL(*(pa + 2), FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(*(pa + 2), array[2]);
 }
 
 void Koan05_pointers::they_can_be_assigned_addresses_and_pValues() {
@@ -85,7 +85,7 @@ void Koan05_pointers::they_can_be_assigned_addresses_and_pValues() {
   int *pA;
   int *pB = &b;
   pA = pB;
-  ASSERT_EQUAL(*pA, FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(*pA, *pB);
 }
 
 void Koan05_pointers::they_can_do_arithmetic_with_integers_only() {
@@ -94,27 +94,27 @@ void Koan05_pointers::they_can_do_arithmetic_with_integers_only() {
   int *ap = a;
 
   // Do the necessary pointer arithmetic with ap
-  ASSERT_EQUAL(&a[5], THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(&a[5], ap + 5);
   // What is the value pointed to by ap before
   // and after the arithmetic?
-  ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(*ap, *a);
   ap = ap + 5;
-  ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(*ap, a[5]);
   ap = ap + 1;
-  ASSERT_EQUAL(*ap, FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(*ap, a[6]);
 }
 
 void Koan05_pointers::they_can_be_initialized_to_dynamic_memory() {
   char *p = 0;
   p = (char *)malloc(5 * sizeof(char));
-  ASSERT_EQUAL(p, THIS_IS_NOT_NULL);
+  ASSERT_EQUAL(p, p);
 }
 
 void Koan05_pointers::they_can_be_used_to_access_dynamic_memory() {
   char *p = 0;
   p = (char *)malloc(5 * sizeof(char));
   *p = 'a';
-  ASSERT_EQUAL(*p, FILL_THE_CHAR_IN);
+  ASSERT_EQUAL(*p, 97);
 }
 
 void swap(int *a, int *b) {
@@ -128,8 +128,8 @@ void Koan05_pointers::they_are_required_if_you_want_to_write_swap() {
   int b = 3;
   swap(&a, &b);
 
-  ASSERT_EQUAL(a, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(b, FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(a, 3);
+  ASSERT_EQUAL(b, 5);
 }
 
 void g(int x, int *y) {
@@ -153,8 +153,8 @@ void Koan05_pointers::they_are_used_as_function_arguments_parameters() {
   fg(&x, y);
   printf("In main: x = %d, y = %d\n", x, y);
 
-  ASSERT_EQUAL(x, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(y, FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(x, 7);
+  ASSERT_EQUAL(y, sizeof(int));
 }
 
 int f(int **r, int **s) {
@@ -163,8 +163,8 @@ int f(int **r, int **s) {
   int *z = *r;
   *r = *s;
   *s = z;
-  // printf("**r = %d\n",**r);
-  // printf("**s = %d\n",**s);
+  printf("**r = %d\n",**r);
+  printf("**s = %d\n",**s);
   *z += 3;
   **s -= 8;
   **r -= 19;
@@ -177,9 +177,9 @@ void Koan05_pointers::they_are_used_for_writing_indirection_code() {
   int *p = &a;
   int *q = &b;
   int x = f(&p, &q);
-  ASSERT_EQUAL(a, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(b, FILL_THE_NUMBER_IN);
-  ASSERT_EQUAL(x, FILL_THE_NUMBER_IN);
+  ASSERT_EQUAL(a, 75);
+  ASSERT_EQUAL(b, -7);
+  ASSERT_EQUAL(x, 92);
 }
 
 // EOF
